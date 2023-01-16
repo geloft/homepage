@@ -1,0 +1,61 @@
+
+.main-body {
+    background-image: repeating-linear-gradient(90deg,#009eff,#00f38d);
+}
+
+html {
+    font-size: 14px;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    background-image: linear-gradient(90deg, #009eff, #00f38d);
+    height: 8px;
+    border: 0;
+}
+
+@if $enable-transitions {
+    @keyframes progress-bar-stripes {
+        0% {
+            background-position-x: $progress-height;
+        }
+    }
+}
+
+.hero-div {
+    max-width: 100%;
+    height: 30%;
+    background-image: repeating-linear-gradient(90deg,#00f38d,#009eff);
+    animation: ava-animate 4s infinite alternate;
+    overflow: hidden;
+}
+
+@keyframes ava-animate {
+    0% {
+        border-radius: 80% 20% 60% 40% / 72% 29% 71% 28%;
+    }
+
+    25% {
+        border-radius: 48% 52% 60% 40% / 72% 29% 71% 28%;
+    }
+
+    50% {
+        border-radius: 48% 52% 32% 68% / 66% 29% 71% 34%;
+    }
+
+    75% {
+        border-radius: 37% 63% 32% 68% / 45% 58% 42% 55%;
+    }
+
+    100% {
+        border-radius: 37% 63% 32% 68% / 27% 72% 28% 73%;
+    }
+}
